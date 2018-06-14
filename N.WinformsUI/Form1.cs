@@ -19,14 +19,13 @@ namespace N.WinformsUI
         private readonly IProductService _productService;
         public Form1()
         {
-            _productService = new ProductManager(new NhProductDal());
+            _productService = new ProductManager(new EfProductDal());
             InitializeComponent();
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             dgvProduct.DataSource = _productService.GetAll();
         }
     }

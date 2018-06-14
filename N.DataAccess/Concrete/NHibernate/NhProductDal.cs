@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using N.DataAccess.Abstract;
 using N.Entites.Concrete;
 
@@ -6,7 +8,7 @@ namespace N.DataAccess.Concrete.NHibernate
 {
     public class NhProductDal : IProductDal
     {
-        public List<Product> GetAll()
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             List<Product> products = new List<Product>
             {
@@ -15,9 +17,9 @@ namespace N.DataAccess.Concrete.NHibernate
             return products;
         }
 
-        public Product Get(int id)
+        public Product Get(Expression<Func<Product, bool>> filter)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Add(Product product)

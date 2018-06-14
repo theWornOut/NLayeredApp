@@ -6,5 +6,6 @@ namespace N.DataAccess.Concrete.EntityFramework
     public class NContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

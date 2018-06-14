@@ -1,6 +1,8 @@
-﻿namespace N.Entites.Concrete
+﻿using N.Entites.Abstract;
+
+namespace N.Entites.Concrete
 {
-    public class Product
+    public class Product : IEntity
     {
         public int ProductId { get; set; }
         public int CategoryId { get; set; }
