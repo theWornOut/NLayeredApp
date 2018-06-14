@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IProductService.cs" />
+    <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\N.DataAccess\N.DataAccess.csproj">
+      <Project>{6E7718FD-0566-45F0-AF66-C968EFD52F05}</Project>
+      <Name>N.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\N.Entites\N.Entites.csproj">
+      <Project>{AF78E574-5333-4A2D-A82F-EF209D9AFE86}</Project>
+      <Name>N.Entites</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

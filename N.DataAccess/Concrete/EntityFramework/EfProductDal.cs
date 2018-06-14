@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using N.DataAccess.Abstract;
 using N.Entites.Concrete;
 
-namespace N.DataAccess.Concrete
+namespace N.DataAccess.Concrete.EntityFramework
 {
-    public class ProductDal
+    public class EfProductDal : IProductDal
     {
         public List<Product> GetAll()
         {
